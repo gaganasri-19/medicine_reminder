@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MediGo</string>
+    <string name="my_medicines">NEW MEDICINE</string>
+    <string name="medication">  Medication</string>
+    <string name="medication_name">Medication name</string>
+    <string name="schedule">Schedule</string>
+
+    <string name="todo">TODO</string>
+    <string name="reminders">Reminders</string>
+
+    <string name="addmed">ADD NEW MEDICINE</string>
+</resources>

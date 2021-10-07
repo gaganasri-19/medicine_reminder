@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="600dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD NEW MEDICINE"
+        android:gravity="center"
+        android:paddingStart="95dp"
+        android:textSize="20dp"
+        android:textColor="@color/dblue"></TextView>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="410dp"
+        android:layout_height="25dp"
+        android:background="@color/grey"
+        android:paddingLeft="12dp"
+        android:paddingTop="0dp"
+        android:text="@string/medication"
+        android:textColor="@color/dblue"
+        android:textSize="18sp"></TextView>
+    <EditText
+        android:id="@+id/editPersonName"
+        android:layout_width="319dp"
+        android:layout_height="45dp"
+        android:textSize="20sp"
+
+        android:ems="10"
+        android:hint="@string/medication_name"
+
+        android:inputType="textPersonName"
+        android:textColor="@color/cardview_dark_background"></EditText>
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="187dp"
+        android:gravity="center"
+        android:hint="Medicine type"
+        android:layout_height="45dp"></Spinner>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="407dp"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:text="@string/reminders"
+        android:textColor="@color/dblue"
+        android:background="@color/grey"
+        android:textSize="18sp"></TextView>
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="186dp"
+        android:hint="Once a day"
+        android:gravity="center"
+        android:layout_height="45dp"></Spinner>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:paddingStart="50dp"
+        android:text="Time"></TextView>
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="70dp"
+        android:text="Dose"></TextView></LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editt4"
+
+            android:layout_width="102dp"
+            android:layout_height="45dp"
+           android:layout_marginStart="20dp"
+
+            android:fontFamily="sans-serif"
+
+            android:hint="9:00 AM"
+            android:textSize="18dp"></EditText>
+
+        <EditText
+            android:id="@+id/editPersonName2"
+            android:layout_width="92dp"
+            android:layout_height="45dp"
+
+
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="1.0"
+            android:textSize="18dp"></EditText>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="411dp"
+        android:layout_height="30dp"
+        android:paddingLeft="10dp"
+        android:background="@color/grey"
+
+        android:text="@string/schedule"
+        android:textColor="@color/dblue"
+
+        android:textSize="18sp"></TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingStart="20dp"
+        android:text="Start date"></TextView>
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="60dp"
+
+        android:text="End date"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <EditText
+        android:id="@+id/edit10"
+
+        android:layout_width="147dp"
+        android:layout_height="45dp"
+
+        android:fontFamily="sans-serif"
+
+        android:hint="01-01-2000"
+        android:inputType="none"
+        android:textSize="18dp"></EditText>
+        <EditText
+            android:id="@+id/editt20"
+            android:layout_width="152dp"
+            android:layout_height="45dp"
+            android:inputType="date"
+            android:fontFamily="sans-serif"
+            android:hint="Select date"
+
+            android:textSize="18dp"></EditText>
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/every_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/dblue"
+        android:text="Every day" />
+
+    <LinearLayout
+        android:id="@+id/checkbox_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7">
+
+        <CheckBox
+            android:id="@+id/dv_sunday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/dblue"
+            android:gravity="center"
+            android:text="S"
+            tools:ignore="MissingClass" />
+
+        <CheckBox
+            android:id="@+id/dv_monday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+
+            android:buttonTint="@color/dblue"
+            android:gravity="center"
+            android:text="M" />
+
+
+        <CheckBox
+            android:id="@+id/dv_tuesday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+
+            android:buttonTint="@color/dblue"
+            android:gravity="center"
+            android:text="T" />
+
+        <CheckBox
+            android:id="@+id/dv_wednesday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+
+            android:buttonTint="@color/dblue"
+            android:gravity="center"
+            android:text="W" />
+
+        <CheckBox
+            android:id="@+id/dv_thursday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+
+            android:buttonTint="@color/dblue"
+            android:gravity="center"
+            android:text="T" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/dv_friday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+
+            android:buttonTint="@color/dblue"
+            android:gravity="center"
+            android:text="F" />
+
+
+        <CheckBox
+            android:id="@+id/dv_saturday"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/dblue"
+            android:gravity="center"
+            android:text="S" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/futton"
+        android:layout_width="51dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/dblue"
+        android:clickable="true"
+        android:src="@drawable/baseline_done_white_18"></ImageButton>
+
+</LinearLayout>

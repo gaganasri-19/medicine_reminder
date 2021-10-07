@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent" android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme"
+        tools:context=".MainActivity2">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="414dp"
+            android:layout_height="45dp"
+            android:background="@color/blue"
+            app:layout_constraintBottom_toTopOf="@+id/contentFrame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="388dp"
+                android:layout_height="match_parent"
+                android:theme="@style/AppTheme"
+                tools:context=".MainActivity2">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="391dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="729dp"
+                    android:background="@color/blue"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="128dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="217dp"
+                    android:layout_marginBottom="13dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/my_medicines"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="19dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/blue"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/baseline_chevron_left_white_18"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4"
+                    tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="410dp"
+            android:layout_height="42dp"
+            android:background="@color/grey"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:text="@string/medication"
+            android:textColor="@color/dblue"
+            android:textSize="20sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="411dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="364dp"
+            android:background="@color/grey"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:text="@string/schedule"
+            android:textColor="@color/dblue"
+
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+        <EditText
+            android:id="@+id/editPersonName"
+            android:layout_width="319dp"
+            android:layout_height="51dp"
+
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="37dp"
+            android:ems="10"
+            android:hint="@string/medication_name"
+
+            android:inputType="textPersonName"
+            android:textColor="@color/cardview_dark_background"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"></EditText>
+
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="187dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="112dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPersonName"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="407dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/grey"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:text="@string/reminders"
+            android:textColor="@color/dblue"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="186dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:textAlignment="center"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="121dp"
+            android:text="Time"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.391"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="152dp"
+            android:layout_marginEnd="121dp"
+
+            android:text="Start date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.259"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dose"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.559"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="152dp"
+
+            android:text="End date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+
+        <EditText
+            android:id="@+id/edit4"
+
+            android:layout_width="102dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="352dp"
+            android:background="@color/grey"
+            android:fontFamily="sans-serif"
+
+            android:hint="Select time"
+            android:inputType="none"
+            android:textSize="16dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.197"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/edit10"
+
+            android:layout_width="147dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="524dp"
+            android:background="@color/grey"
+            android:fontFamily="sans-serif"
+
+            android:hint="Select date"
+            android:inputType="none"
+            android:textSize="13dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/edit20"
+
+            android:layout_width="152dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="524dp"
+            android:background="@color/grey"
+            android:fontFamily="sans-serif"
+
+            android:hint="Select date"
+            android:inputType="none"
+            android:textSize="13dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.931"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/editPersonName2"
+            android:layout_width="92dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="76dp"
+            android:background="@color/grey"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="1.0"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="782dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="309dp"
+            android:layout_marginTop="191dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_done_white_18"
+            app:backgroundTint="@color/dblue"
+            app:fabSize="normal"
+            app:layout_anchor="@id/contentFrame"
+            app:layout_anchorGravity="bottom|right|end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPersonName2"
+            app:layout_constraintVertical_bias="0.824"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="27dp"
+            android:orientation="horizontal"
+            android:paddingEnd="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit20"
+            app:layout_constraintVertical_bias="0.0">
+
+            <CheckBox
+                android:id="@+id/textView10"
+                android:layout_width="29dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="25dp"
+
+
+                android:layout_marginBottom="138dp"
+                android:buttonTint="@color/blue"
+                android:text=""
+                android:textColor="@color/dgrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit10" />
+
+            <CheckBox
+                android:id="@+id/textView11"
+                android:layout_width="31dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="18dp"
+
+                android:buttonTint="@color/blue"
+                android:text="T"
+                android:textColor="@color/dgrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/edit10" />
+
+            <CheckBox
+                android:id="@+id/textView12"
+                android:layout_width="26dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="18dp"
+
+
+                android:buttonTint="@color/blue"
+                android:text="W"
+                android:textColor="@color/dgrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/edit10" />
+
+            <CheckBox
+                android:id="@+id/textView13"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="18dp"
+
+                android:buttonTint="@color/blue"
+                android:text="T"
+                android:textColor="@color/dgrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/edit10" />
+
+            <CheckBox
+                android:id="@+id/textView14"
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="18dp"
+
+                android:buttonTint="@color/blue"
+                android:text="F"
+                android:textColor="@color/dgrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/edit10" />
+
+            <CheckBox
+                android:id="@+id/textView15"
+                android:layout_width="26dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="18dp"
+
+                android:buttonTint="@color/blue"
+                android:text="S"
+                android:textColor="@color/dgrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/edit10" />
+
+            <CheckBox
+                android:id="@+id/textView16"
+                android:layout_width="29dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="18dp"
+
+                android:buttonTint="@color/blue"
+                android:text="S"
+                android:textColor="@color/dgrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView10"></CheckBox>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="325dp"
+            android:layout_height="30dp"
+            android:text="    M           T           W          T             F            S          S"
+            android:textColor="@color/dblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.465"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.861" />
+
+        <CheckBox
+            android:id="@+id/checkBox8"
+            android:layout_width="85dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="149dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="149dp"
+            android:layout_marginBottom="190dp"
+            android:buttonTint="@color/dblue"
+            android:text="EveryDay"
+            android:textColor="@color/dgrey"
+
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit10" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

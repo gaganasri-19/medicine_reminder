@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="420dp"
+        android:layout_height="48dp"
+        android:background="@color/blue"
+
+        app:layout_constraintBottom_toTopOf="@+id/contentFramee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:theme="@style/AppTheme"
+            tools:context=".MainActivity2">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="628dp"
+                android:background="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:title="Today"
+                app:titleTextColor="@color/white" />
+            <TextView
+                android:id="@+id/datetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/appbar"
+                app:layout_constraintStart_toStartOf="@id/appbar"
+                app:layout_constraintEnd_toEndOf="@id/appbar"
+                android:textSize="20dp"
+                android:paddingStart="30dp"
+                android:paddingTop="8dp"
+                tools:ignore="NotSibling"></TextView>
+
+
+            <ImageButton
+                android:id="@+id/imagebutton2"
+                android:layout_width="29dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/blue"
+                android:buttonTint="@color/dblue"
+                android:outlineProvider="none"
+                android:src="@drawable/baseline_arrow_drop_down_white_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/contentFramee"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="782dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floatadd"
+        android:layout_marginStart="327dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/baseline_add_white_18"
+        app:backgroundTint="@color/dblue"
+        app:fabSize="normal"
+        app:layout_anchor="@id/contentFrame"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/textnomed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="236dp"
+        android:text="No Medicines added. Click + to add"
+        android:textColor="@color/dgrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medimage" />
+
+    <ImageView
+        android:id="@+id/medimage"
+        android:layout_width="69dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/nomed"
+        app:layout_constraintBottom_toTopOf="@+id/textnomed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        tools:ignore="NotSibling" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
